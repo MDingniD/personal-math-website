@@ -8,14 +8,14 @@ import HomeCard from "../components/HomeCard.astro";
   <div class="hero-text">
     <h1>Yiding Ma</h1>
     <p class="subtitle">
-      Mathematics undergraduate at the University of Edinburgh, interested in algebra,
-      representation theory, and geometry.
+      Mathematics undergraduate at the University of Edinburgh, interested in
+      representation theory, and algebraic geometry.
     </p>
 
     <div class="button-row">
-      <a class="button" href={`${import.meta.env.BASE_URL}notes`}>View Notes</a>
-      <a class="button" href={`${import.meta.env.BASE_URL}courses`}>Courses</a>
-      <a class="button" href={`${import.meta.env.BASE_URL}reading`}>Reading</a> 
+      <a class="button" href="/notes">View Notes</a>
+      <a class="button" href="/courses">Courses</a>
+      <a class="button" href="/reading">Reading</a> 
     </div>
   </div>
 
@@ -36,30 +36,9 @@ import HomeCard from "../components/HomeCard.astro";
   </section>
 
   <section>
-    <h2>Explore</h2>
-    <div class="card-grid">
-      <HomeCard
-        title="Notes"
-        description="Lecture notes, self-study notes, and polished mathematical writeups."
-        href="/notes"
-      />
-      <HomeCard
-        title="Courses"
-        description="Current and past courses, together with topics, books, and related materials."
-        href="/courses"
-      />
-      <HomeCard
-        title="Reading"
-        description="Books, papers, and independent reading projects collected over time."
-        href="/reading"
-      />
-    </div>
-  </section>
-
-  <section>
     <h2>Current interests</h2>
     <p class="muted">
-      Algebra · Representation theory · Geometry · Algebraic geometry
+      Algebra · Representation theory · Algebraic geometry
     </p>
   </section>
 </BaseLayout>
