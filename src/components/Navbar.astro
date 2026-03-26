@@ -1,0 +1,53 @@
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">Yiding Ma</a>
+    <nav>
+      <a href="/notes">Notes</a>
+      <a href="/courses">Courses</a>
+      <a href="/reading">Reading</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(248, 247, 244, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ddd8cf;
+    z-index: 10;
+  }
+
+  .inner {
+    width: min(900px, calc(100% - 2rem));
+    margin: 0 auto;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f1f1f;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: #4f4f4f;
+  }
+
+  nav a:hover {
+    color: #1f4b99;
+    text-decoration: none;
+  }
+</style>

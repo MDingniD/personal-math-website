@@ -1,17 +1,83 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeCard from "../components/HomeCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Yiding Ma">
+  <section class="page-title hero">
+  <div class="hero-text">
+    <h1>Yiding Ma</h1>
+    <p class="subtitle">
+      Mathematics undergraduate at the University of Edinburgh, interested in algebra,
+      representation theory, and geometry.
+    </p>
+
+    <div class="button-row">
+      <a class="button" href="/notes">View Notes</a>
+      <a class="button" href="/courses">Courses</a>
+      <a class="button" href="/reading">Reading</a>
+    </div>
+  </div>
+
+  <img src="/profile.jpg" alt="Yiding Ma" class="hero-img" />
+</section>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      This website is a long-term collection of my mathematical notes, course pages,
+      reading records, and related writing. I am especially interested in algebra,
+      representation theory, and geometry.
+    </p>
+  </section>
+
+  <section>
+    <h2>Explore</h2>
+    <div class="card-grid">
+      <HomeCard
+        title="Notes"
+        description="Lecture notes, self-study notes, and polished mathematical writeups."
+        href="/notes"
+      />
+      <HomeCard
+        title="Courses"
+        description="Current and past courses, together with topics, books, and related materials."
+        href="/courses"
+      />
+      <HomeCard
+        title="Reading"
+        description="Books, papers, and independent reading projects collected over time."
+        href="/reading"
+      />
+    </div>
+  </section>
+
+  <section>
+    <h2>Current interests</h2>
+    <p class="muted">
+      Algebra · Representation theory · Geometry · Algebraic geometry
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .hero-img {
+	width: clamp(120px, 18vw, 170px);
+  	height: clamp(120px, 18vw, 170px);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ddd8cf;
+  }
+</style>
