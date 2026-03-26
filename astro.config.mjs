@@ -2,4 +2,8 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  output: 'static',
+  site: 'https://MDinginD.github.io',
+  base: '/personal-math-website',
+});
