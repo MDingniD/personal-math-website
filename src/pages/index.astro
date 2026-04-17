@@ -11,6 +11,13 @@ import HomeCard from "../components/HomeCard.astro";
       Mathematics undergraduate at the University of Edinburgh, interested in
       representation theory, and algebraic geometry.
     </p>
+  <a 
+    href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/CV_Yiding.pdf`} 
+    class="cv-link" 
+    target="_blank"
+  >
+    View CV <span aria-hidden="true">→</span>
+  </a>
   </div>
 
   <img 
@@ -57,4 +64,28 @@ import HomeCard from "../components/HomeCard.astro";
     border-radius: 50%;
     border: 1px solid #ddd8cf;
   }
+
+  .links {
+    margin-top: 1.25rem;
+  }
+
+  .cv-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color, #333); /* Uses your site's text color */
+    border-bottom: 1px solid #ddd8cf;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+  }
+
+  .cv-link:hover {
+    border-color: #444;
+  }
+
+  .cv-link span {
+    margin-left: 0.4rem;
+  }
 </style>
+
